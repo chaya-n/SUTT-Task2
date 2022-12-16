@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "284093903717",
+    "project_id": "railwayapp-7f308",
+    "storage_bucket": "railwayapp-7f308.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284093903717:android:64c151980488912d3fe78c",
+        "android_client_info": {
+          "package_name": "com.example.flutterprojects"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284093903717-chij18no1m73ckn6qf82u2831h0pp815.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACBm5YlOG5SUxRONYJ5gcb3Xvw4IThlaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284093903717-chij18no1m73ckn6qf82u2831h0pp815.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
