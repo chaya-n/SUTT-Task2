@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojects/SelectStations.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:flutterprojects/SecondPage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -49,7 +50,9 @@ class _LoginInState extends State<LoginIn> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.network(_userObj.photoUrl!),
+              ClipOval(
+                child:Image.network(_userObj.photoUrl!),
+              ),
               const SizedBox(height: 20,),
               Text(_userObj.displayName!),
               const SizedBox(height: 20,),
@@ -75,11 +78,12 @@ class _LoginInState extends State<LoginIn> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Railway Services Sign In",
+              Text("RAILWAY SERVICES",
               style: TextStyle(fontSize: 32),selectionColor: Color.fromRGBO(0, 0, 0, 1.00),),
+              SizedBox(height: 30),
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                child: MaterialButton(
+                child: ElevatedButton(
                   onPressed: () {
                     _googleSignIn.signIn().then((userData) {
                       setState(() {
@@ -89,14 +93,15 @@ class _LoginInState extends State<LoginIn> {
                         print(userData.runtimeType);
 
                       });
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => SecondPage(_userObj), ));
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => SelectStations(), ));
                     }).catchError((e) {
                       print(e);
                     });
                   },
-                  height: 50,
-                  minWidth: 100,
-                  color: Colors.brown,
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.brown,
+                    minimumSize: Size(double.infinity, 50)
+                  ),
                   child: const Text('Google SignIn',style: TextStyle(color: Colors.white),),
                 ),
               )
